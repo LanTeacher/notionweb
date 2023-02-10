@@ -40,9 +40,6 @@
 #contents {
 	width:calc(100% - var(--page-menu-width) - var(--page-side-padding));
 }
-.prev_page_title{
-	margin-bottom: calc((var(--page-header-height) + 1px) * 1) !important;
-}
 
 /* GNB */
 #gnb {
@@ -110,5 +107,8 @@
 	}
 	.notion-selectable-halo{
 		top: var(--page-header-height) !important;
+	}
+	.prev_page_title{
+		margin-bottom: calc((var(--page-header-height) + 1px) * -1) !important;
 	}
 }
