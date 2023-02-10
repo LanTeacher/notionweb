@@ -1,0 +1,8 @@
+const getEle=(ele,tar=document)=>tar.querySelector(ele);const getEleAll=(eles,tar=document)=>tar.querySelectorAll(eles);const getBlockID=obj=>getEle(`div[data-block-id="${obj}"]`);const getBlockIDs=list=>list.map(id=>getBlockID(id));function setId(ele,id){if(!!ele)ele.id=id;}
+function setClass(ele,cls){if(!!ele)ele.classList.add(cls);}
+function removeClass(ele,cls){if(!!ele)ele.classList.remove(cls);}
+function checkClass(ele,cls){return ele.classList.contains(cls);}
+function removeMenu(targets,gnb){const gnbLinks=getEleAll('a',gnb);gnbLinks.forEach((ele,index)=>{if(targets.includes(index+1)){ele.parentElement.remove();}});}
+function setSite(gnbID,contentID,removeMenuNums){const pageTitle=getEle('.page-title');const header=pageTitle.closest('.notion-scroller >div');setId(header,'header');const contBlock=getBlockID(contentID);if(!!contBlock)setId(contBlock.parentElement,'contents');getEleAll('.notion-header-block').forEach(ele=>{if(!!ele.previousElementSibling)setClass(ele.previousElementSibling,'prev_page_title');})
+const gnb=getBlockID(gnbID);const topBarTitle=getEle('.notion-topbar >div >div:first-child');if(!!gnb){setId(gnb.parentElement,'gnb');removeMenu(removeMenuNums,gnb.parentElement);}
+let menuTop=header.clientHeight+7;const scrollFn=()=>{if(!!gnb){const gnbTar=getEle('#gnb');if(menuTop<gnbTar.offsetTop){if(!checkClass(gnbTar,'menu_shadow'))setClass(gnbTar,'menu_shadow');}else{removeClass(gnbTar,'menu_shadow');}}};window.addEventListener('load',()=>{menuTop=header.clientHeight+7;scrollFn()});window.addEventListener('scroll',scrollFn);window.addEventListener('resize',()=>{menuTop=header.clientHeight+7;scrollFn()});getEleAll('.notion-gallery-view').forEach(ele=>{setClass(ele.parentElement,'notion_gallery_view');});};
