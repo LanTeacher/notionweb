@@ -1,14 +1,4 @@
 /* CSS 공통 */
-:root{
-	--page-max-width:1100px !important;
-	--page-min-width:320px !important;
-	--page-side-padding:48px !important;
-	--page-header-height:47px;
-	--page-menu-width:105px;
-	--page-menu-height:245px;
-	--mobile-side-padding:24px;
-	--mobile-menu-height:24px;
-}
 :root .padding{
 	padding-left: calc(var(--page-side-padding) + env(safe-area-inset-left)) !important;
 	padding-right: calc(var(--page-side-padding) + env(safe-area-inset-right)) !important;
