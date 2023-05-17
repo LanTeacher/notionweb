@@ -129,15 +129,3 @@
     margin-bottom: calc((var(--page-header-height) + 1px) * -1) !important;
   }
 }
-
-/* CSS 공통 */
-:root {
-  /* 페이지 양끝 간격 */
-  --page-side-padding: 46px !important;
-  /* 콘텐츠 최대 사이즈 */
-  --page-max-width: 1024px !important;
-  /* 헤더 영역의 높이 */
-  --page-header-height: 47px;
-  /* 데스크탑용 메뉴 넓이 */
-  --page-menu-width: 90px;
-}
