@@ -115,7 +115,7 @@ function setObserver(func = null) {
                                 setId(target, eleOpt.id);
                                 if (eleOpt.id == 'gnb') {
                                     setGnb(target);
-                                    let gnbHeight = 12;
+                                    let gnbHeight = 24;
                                     target.querySelectorAll('[role="button"]').forEach(btn => {
                                         const parEle = btn.parentElement.parentElement;
                                         if (btn.firstChild.style.marginLeft != '0px') {
