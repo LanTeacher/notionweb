@@ -80,7 +80,7 @@ function setObserver(func = null) {
         mutationList.forEach((ele, index) => {
             const obsTar = ele.target;
             /* GNB 찾기 */
-            getEleAll('[class*="CodeBlock_block"]', obsTar).forEach(ele => {
+            getEleAll('[class*="CodeBlock_block"]').forEach(ele => {
                 if (ele.firstChild.nodeName == 'NOTION') {
                     if (ele.firstChild.dataset.state == 'start') {
                         const eleArr = [];
