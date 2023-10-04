@@ -62,7 +62,7 @@
 /* 테이블 정리 */
 .notion-table-view a:first-child {
   pointer-events: none;
-  cursor: default;
+  cursor: default!important;
 }
 .notion-table-view a:first-child span{
   background-image: none !important;
