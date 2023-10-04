@@ -60,7 +60,7 @@
 }
 
 /* 테이블 정리 */
-.notion-table-view a {
+.notion-table-view a:last-child {
   display: none !important;
 }
 
