@@ -60,6 +60,13 @@
 }
 
 /* 테이블 정리 */
+.notion-table-view a:first-child {
+  pointer-events: none;
+  cursor: default;
+}
+.notion-table-view a:first-child span{
+  background-image: none !important;
+}
 .notion-table-view a:last-child {
   display: none !important;
 }
